@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 /* ─── FONTS ───────────────────────────────────────────────── */
 const injectFonts = () => {
+  if (typeof document === "undefined") return;
   if (document.getElementById("sdn-fonts")) return;
   const l = document.createElement("link");
   l.id = "sdn-fonts"; l.rel = "stylesheet";
